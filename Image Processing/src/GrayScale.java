@@ -67,7 +67,7 @@ public class GrayScale
                 int avg = (r+g+b)/3;
  
                 // replace RGB value with avg
-                p = (a<<24) | (r<<16) | (g<<8) | b;
+                p = (a<<24) | (avg<<16) | (avg<<8) | avg;
  
                 img.setRGB(x, y, p);
             }
