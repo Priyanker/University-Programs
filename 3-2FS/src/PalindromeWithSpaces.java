@@ -21,15 +21,34 @@ class PalindromeWithSpaces
     public static void main (String[] args) {
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
-        StringBuilder temp = new StringBuilder(s);
-        
+        StringBuilder sb = new StringBuilder(s);
         for(int i=0;i<sb.length();i++)
         {
-            if(temp.charAt(i)==" ")
-            {
-                temp.deleteCharAt(i);
-            }
+        	if(sb.charAt(i)==' ')
+        	{
+        		sb.deleteCharAt(i);
+        	}
         }
-        System.out.println(temp);
+        if(isPalindrome(sb.toString()))
+        {
+        	System.out.println("1");
+        }
+        else
+        {
+        	System.out.println("-1");
+        }
+    }
+    static boolean isPalindrome(String x)
+    {
+    	StringBuilder sb = new StringBuilder(x);
+    	sb.reverse();
+    	if(x.equals(sb.toString()))
+    	{
+    		return true;
+    	}
+    	else
+    	{
+    		return false;
+    	}
     }
 }
