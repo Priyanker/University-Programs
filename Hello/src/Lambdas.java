@@ -12,5 +12,6 @@ public class Lambdas {
             System.out.println("Drawing "+width);  
         };  
         d2.draw();  
+        System.out.println();
     }  
 }  
