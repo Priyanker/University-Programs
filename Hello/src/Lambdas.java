@@ -13,5 +13,6 @@ public class Lambdas {
         };  
         d2.draw();  
         System.out.println();
+        
     }  
 }  
