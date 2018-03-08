@@ -1,3 +1,6 @@
+import java.text.DateFormat;
+import java.util.Base64;
+
 @FunctionalInterface  //It is optional  
 interface Drawable{  
     public void draw();  
@@ -12,8 +15,6 @@ public class Lambdas {
             System.out.println("Drawing "+width);  
         };  
         d2.draw();  
-        System.out.println();
-        
        
     }  
 }  
