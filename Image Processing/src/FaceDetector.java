@@ -1,4 +1,6 @@
 // Java program to demonstrate face detection
+import java.io.BufferedReader;
+
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
@@ -30,7 +32,7 @@ public class FaceDetector
         faceDetector.load("haarcascade_frontalface_alt.xml");
  
         // Input image
-        Mat image = Imgcodecs.imread("C:\\Users\\Priyanker\\Pictures\\Justice League\\wp-1459397023115.png");
+        Mat image = Imgcodecs.imread("C:\\Users\\Priyanker\\Downloads\\JL.jpg");
  
         // Detecting faces
         MatOfRect faceDetections = new MatOfRect();
@@ -41,13 +43,12 @@ public class FaceDetector
         {
             Imgproc.rectangle(image, new Point(rect.x, rect.y),
              new Point(rect.x + rect.width, rect.y + rect.height),
-                                           new Scalar(255,235,59), 4);
+                                           new Scalar(55,235,59), 4);
         	//Imgproc.circle(image, new Point(rect.x, rect.y), 5, new Scalar(0, 255, 0));
         }
         
- 
         // Saving the output image
-        String filename = "Ouput.png";
-        Imgcodecs.imwrite("D:\\"+filename, image);
+        String filename = "Ouput.jpg";
+        Imgcodecs.imwrite("D:\\Java Programs\\"+filename, image);
     }
 }
